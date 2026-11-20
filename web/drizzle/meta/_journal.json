@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794287280830,
+      "tag": "0000_confused_havok",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794297391999,
+      "tag": "0001_kind_forgotten_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794311043533,
+      "tag": "0002_brainy_black_widow",
+      "breakpoints": true
+    }
+  ]
+}

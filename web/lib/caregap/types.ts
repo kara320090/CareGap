@@ -1,0 +1,23 @@
+export type Service = {
+  record_kind?:'service'|'guide';
+  id:string; source_id:string; canonical_id?:string; source:string; scope:'national'|'local';
+  name:string; province:string; district:string; needs:string[]; groups:string[]; channels:string[]; keywords:string[];
+  target:string; support:string; start:string; check:string; process:string; coverage:string;
+  source_name:string; source_url:string; action_label:string; action_url:string; checked_on:string;
+  source_date:string; collected_at:string; contact_name:string; contact_phone:string|null;
+  implementation_period:string|null; application_period:string|null; application_status:'unknown'|'open'|'closed'|'upcoming';
+  checklist:string[]; regional_checklist_indices:number[]; directory?:string;
+};
+export type Region={id:string;province:string;district:string;source:string;source_date:string;verified_current:boolean};
+export type Facility={id:string;source_id:string;source:string;name:string;province:string;district:string;address:string;phone:string|null;
+  latitude:number|null;longitude:number|null;kind:string;source_url:string;source_date:string;collected_at:string;
+  coordinate_source?:string;coordinate_source_url?:string;coordinate_checked_at?:string;coordinate_query?:string;coordinate_validation?:string;
+  detail_source_url?:string;detail_checked_at?:string;
+  provider_status?:string;provider_services?:string;
+  service_institution_id?:string;registry_facility_code?:string;
+  registry_address?:string;registry_phone?:string|null;registry_name?:string;
+  location_evidence?:{source:string;url:string;record_id:string;service_id:string;address:string;checked_at:string};
+  role:'provider'|'contact'|'related';service_ids:string[];evidence_url:string|null;distance_km?:number;
+  source_records?:{source:string;source_id:string;source_url:string;evidence_url:string|null;source_date:string}[]};
+export type SourceStatus={source:string;label:string;status:string;last_success:string|null;last_error:string|null;active_run_id?:string|null;metadata?:Record<string,unknown>};
+export type Bindings=Cloudflare.Env & {DATA_GO_KR_KEY?:string;REGION_API_KEY?:string;KAKAO_JAVASCRIPT_KEY?:string;KAKAO_REST_KEY?:string;SYNC_OWNER_EMAIL?:string;SYNC_SCHEDULE_ACTIVE?:string};
